@@ -3,20 +3,20 @@ $(() => {
 
 
 const getComputerMove = () => {
-    const randomIndex = Math.floor(Math.random()*3)
+    const randomIndex = Math.floor(Math.random()*5)
     return moves[randomIndex]    
 }
 
-// const $lizzard = $('#lizzard')
+// const $lizard = $('#lizard')
 // const $spock = $('#spock') 
 
 $winner = $('.winner')
 
-//rock beats lizzard, scissors
-// paper beats rock, spock
-// scissors beats paper, lizzard
-// lizzard beats paper, spock
-// spock beats scissors, rock
+//Kobe beats Curry, Shaq
+// Jordan beats Curry, Kobe
+// Lebron beats Jordan, Kobe
+// Curry beats Lebron, Shaq
+// Shaq beats Jordan, Lebron
 
 
 
@@ -27,40 +27,42 @@ const playGame = (playerMove) => {
     if (playerMove === computerMove) {
         $('<h2>').text('Its a tie').appendTo($winner);
     } else if (computerMove === 'rock') {
-        if (playerMove === 'paper') {$('<h2>').text('player wins').appendTo($winner) }
-        else {$('<h2>').text('computer wins').appendTo($winner) };
-    } else if (computerMove === 'paper') {
-        if (playerMove === 'scissors') {$('<h2>').text('player wins').appendTo($winner) }
-        else {$('<h2>').text('computer wins').appendTo($winner) };
-    } else if (computerMove ==='scisssors' {
-        if (playerMove === 'paper') {$('<h2>').text('computer wins').appendTo($winner) }
+        if (playerMove === 'lizard' || playerMove === 'scissors') {$('<h2>').text('computer wins').appendTo($winner) }
         else {$('<h2>').text('player wins').appendTo($winner) };
-        }
+    } else if (computerMove === 'paper') {
+        if (playerMove === 'rock' || playerMove === 'spock') {$('<h2>').text('computer wins').appendTo($winner) }
+        else {$('<h2>').text('player wins').appendTo($winner) };
+    } else if (computerMove ==='scisssors') {
+        if (playerMove === 'paper' || playerMove === 'lizard') {$('<h2>').text('computer wins').appendTo($winner) }
+        else {$('<h2>').text('player wins').appendTo($winner) };
+    } else if (computerMove === 'lizard') {
+        if (playerMove === 'paper' || playerMove === 'spock') {$('<h2>').text('computer wins').appendTo($winner) }
+        else {$('<h2>').text('player wins').appendTo($winner) };
+    } else {
+        if (playerMove === 'scissors' || playerMove === 'rock') {$('<h2>').text('computer wins').appendTo($winner) }
+        else {$('<h2>').text('player wins').appendTo($winner) };
+    }
     }
 
  
-const moves = ["rock", "paper", "scissors"];
+const moves = ["Kobe", "Jordan", "Lebron", "Curry", "Shaq"];
 
-const $rock = $('#rock') 
-$rock.on("click", function() {
-    playGame(`${moves[0]}`)
-})
-const $paper = $('#paper') 
-$paper.on("click", function() {
-    playGame(`${moves[1]}`)
-})
-const $scissors = $('#scissors') 
-$scissors.on("click", function() {
-    playGame(`${moves[2]}`)
-})
+const $kobe = $('#kobe') 
+$kobe.on("click", function() {playGame(`${moves[0]}`)})
+
+const $jordan = $('#jordan') 
+$jordan.on("click", function() {playGame(`${moves[1]}`)})
+
+const $lebron = $('#lebron') 
+$lebron.on("click", function() {playGame(`${moves[2]}`)})
+
+const $curry = $('#curry') 
+$curry.on("click", function() {playGame(`${moves[3]}`)})
+
+const $shaq = $('#shaq') 
+$shaq.on("click", function() {playGame(`${moves[4]}`)})
 
 });
-
-// $lizzard.click([playerMove = moves[3]], playGame)
-
-// $spock.click([playerMove = moves[4]], playGame)
-
-
 
 
 
