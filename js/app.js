@@ -1,13 +1,12 @@
-let playerMove = null
-let computerMove = null
+$(() => {
+    console.log($)
+let playerMove = null;
+let computerMove = null;
 
-moves = ["rock", "paper", "scissors", "lizzard", "spock"]
+const moves = ["rock", "paper", "scissors"];
 
-const $rock = $('#rock') 
-const $paper = $('#paper')
-const $scissors = $('#scissors') 
-const $lizzard = $('#lizzard')
-const $spock = $('#spock') 
+// const $lizzard = $('#lizzard')
+// const $spock = $('#spock') 
 
 $winner = $('.winner')
 
@@ -17,39 +16,35 @@ $winner = $('.winner')
 // lizzard beats paper, spock
 // spock beats scissors, rock
 
-const randomIndex = Math.floor(Math.random()*5)
+const randomIndex = Math.floor(Math.random()*3)
 computerMove = moves[randomIndex]
+// console.log(computerMove)
 
-playGame = () => {
+const playGame = () => {
     if (playerMove === computerMove) {
-        $winner.text(`It's a tie!`)
-    // } else if (computerMove === moves[0) {
-    //     if (playerChoice === moves[2] || playerChoice === moves[3]){
-    //     $winner.text(`computer wins!`)
-    //     } else {
-    //         $winner.text('player wins!')
-    // }else if (computerMove === moves[1]) {
-    //     if (playerChoice === moves[0]) || (playerChoice === moves [4])
-    //     $winner.text('computer wins!')
-
-
-    // }
-
+        $('<h2>').text('Its a tie').appendTo($winner);
+    } else if (computerMove === moves[0]) {
+        if (playerMove === moves[2]) {$('<h2>').text('computer wins').appendTo($winner) }
+        else {$('<h2>').text('player wins').appendTo($winner) };
+    } else if (computerMove === moves[1]) {
+        if (playerMove === moves[0]) {$('<h2>').text('computer wins').appendTo($winner) }
+        else {$('<h2>').text('player wins').appendTo($winner) };
+    } else {
+        if (playerMove === moves[1]) {$('<h2>').text('computer wins').appendTo($winner) }
+        else {$('<h2>').text('player wins').appendTo($winner) };
+        }
     }
-}
+ 
+const $rock = $('#rock') 
+$rock.click([playerMove = moves[0]], playGame())
+const $paper = $('#paper')
+$paper.click([playerMove = moves[1]], playGame())
+const $scissors = $('#scissors')
+$scissors.click([playerMove = moves[2]], playGame())
 
-// $rock.on("click", console.log('choice is rock'))
+// $lizzard.click([playerMove = moves[3]], playGame)
 
-
-$rock.click([playerMove = moves[0]], playGame)
-
-$paper.click([playerMove = moves[1]], playGame)
-
-$scissors.click([playerMove = moves[2]], playGame)
-
-$lizzard.click([playerMove = moves[3]], playGame)
-
-$spock.click([playerMove = moves[4]], playGame)
+// $spock.click([playerMove = moves[4]], playGame)
 
 
 
@@ -62,3 +57,4 @@ $spock.click([playerMove = moves[4]], playGame)
 //computer choice is selected at random
 //user pushes a button, which tells us the user move
 //function is written to determine the winner based on both choices
+});
