@@ -30,16 +30,18 @@ const playGame = (playerMove) => {
     console.log(`player move is + ${playerMove}`)
     if (playerMove === computerMove) {
         $('<h2>').text('Its a tie').appendTo($winner);
-    } else if (computerMove === 'kobe') {
-        if (playerMove === 'curry' || playerMove === 'shaq') {$('<h2>').text('computer wins').appendTo($winner) }
+    } else if (playerMove === 'kobe') {
+        if (computerMove === 'curry' || playerMove === 'shaq') 
+        
+        // {$('<h2>').text('computer wins').appendTo($winner) }; 
         else {$('<h2>').text('player wins').appendTo($winner) };
-    } else if (computerMove === 'jordan') {
+    } else if ( === 'jordan') {
         if (playerMove === 'curry' || playerMove === 'kobe') {$('<h2>').text('computer wins').appendTo($winner) }
         else {$('<h2>').text('player wins').appendTo($winner) };
-    } else if (computerMove ==='lebron') {
+    } else if (playerMove ==='lebron') {
         if (playerMove === 'jordan' || playerMove === 'kobe') {$('<h2>').text('computer wins').appendTo($winner) }
         else {$('<h2>').text('player wins').appendTo($winner) };
-    } else if (computerMove === 'curry') {
+    } else if (playerMove === 'curry') {
         if (playerMove === 'lebron' || playerMove === 'shaq') {$('<h2>').text('computer wins').appendTo($winner) }
         else {$('<h2>').text('player wins').appendTo($winner) };
     } else {
@@ -48,10 +50,18 @@ const playGame = (playerMove) => {
     }
     }
 
+
+const win =() => {
+    score
+}
+
 //adjust score for best of 7 games
 //run until one player gets
 
 const adjustScore = () => {
+    for (i=0; i===4; i++)
+    //if player wins, add 1 to player
+    //if computer wins, add 1 to computer, UNTIL one gets to 4
 
 }
 

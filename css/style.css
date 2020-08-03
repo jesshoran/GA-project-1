@@ -9,11 +9,29 @@ body {
     font-family: arial;
   }
 
+  .scoreboard {
+    margin: 30px auto;
+    background-color: #fd79bb;
+    padding: 20px 33px 30px 15px;
+    width: 175px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+
+    
+
+
+  }
+
+  .stars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
   #kobe {
-    background: url(/images/kobe.jpg);
-    background-repeat: no-repeat;
     cursor: pointer;
     border:none;
-    width:200px;
   }
 
