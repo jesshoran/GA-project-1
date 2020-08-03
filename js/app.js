@@ -1,5 +1,9 @@
 $(() => {
 
+score = {
+    player: null,
+    computer: null
+}
 
 
 const getComputerMove = () => {
@@ -43,6 +47,13 @@ const playGame = (playerMove) => {
         else {$('<h2>').text('player wins').appendTo($winner) };
     }
     }
+
+//adjust score for best of 7 games
+//run until one player gets
+
+const adjustScore = () => {
+
+}
 
  
 const moves = ["kobe", "jordan", "lebron", "curry", "shaq"];
