@@ -18,20 +18,35 @@ body {
     text-align: center;
     font-size: 25px;
     border-radius: 10px;
-
-    
-
-
   }
+
+
 
   .stars {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-  }
-
-  #kobe {
     cursor: pointer;
-    border:none;
+    border: none;
+    max-width: 200px; 
   }
 
+#kobe > img {
+      width: 100px;
+  }
+
+#jordan > img {
+    width: 200px;
+}
+
+#lebron > img {
+    width: 200px;
+}
+
+#curry > img {
+    width: 100px;
+}
+
+#shaq > img {
+    width: 250px;
+}
