@@ -1,15 +1,20 @@
 $(() => {
 
 score = {
-    player: null,
-    computer: null
+    player: 0,
+    computer: 0
 }
 
+playerMove = null;
+computerMove = null;
+
+const moves = ["Kobe", "Jordan", "Lebron", "Curry", "Shaq"];
 
 const getComputerMove = () => {
     const randomIndex = Math.floor(Math.random()*5)
     return moves[randomIndex]    
 }
+computerMove = getComputerMove();
 
 // const $lizard = $('#lizard')
 // const $spock = $('#spock') 
@@ -27,43 +32,52 @@ $computerScore = $('#computerScore')
 
 
 const playGame = (playerMove) => {
-    const computerMove = getComputerMove();
+    // const computerMove = getComputerMove();
     console.log(`computer move is + ${computerMove}`)
     console.log(`player move is + ${playerMove}`)
     if (playerMove === computerMove) {
-        $('<h2>').text('Its a tie').appendTo($winner);
-    } else if (playerMove === 'kobe') {
-        if (computerMove === 'curry' || computerMove === 'shaq') 
-            {win();}
-        else {lose();}
-    } else if ( playerMove=== 'jordan') {
-        if (computerMove === 'curry' || computerMove === 'kobe') 
-            {win()}
-        else {lose()};
-    } else if (playerMove ==='lebron') {
-        if (computerMove === 'jordan' || computerMove === 'kobe') 
-            {win()}
-        else {lose()};
-    } else if (playerMove === 'curry') {
-        if (computerMove === 'lebron' || computerMove === 'shaq') 
-            {win()}
-        else {lose()};
+        $winner.text('Its a tie')
+    } else if (playerMove === 'Kobe') {
+        if (computerMove === 'Curry' || computerMove === 'Shaq'){ 
+            win(playerMove, computerMove)   
+        }else {
+            lose(playerMove, computerMove)}
+    } else if ( playerMove=== 'Jordan') {
+        if (computerMove === 'Curry' || computerMove === 'Kobe'){ 
+            win(playerMove, computerMove)
+        }else {
+            lose(playerMove, computerMove)}
+    } else if (playerMove ==='Lebron') {
+        if (computerMove === 'Jordan' || computerMove === 'Kobe'){ 
+            win(playerMove, computerMove)
+        }else {
+            lose(playerMove, computerMove)}
+    } else if (playerMove === 'Curry') {
+        if (computerMove === 'Lebron' || computerMove === 'Shaq'){
+             win(playerMove, computerMove)
+        }else {
+            lose(playerMove, computerMove)}
     } else {
-        if (computerMove === 'jordan' || computerMove === 'lebron') 
-            {win()}
-        else {lose()};
+        if (computerMove === 'Jordan' || computerMove === 'Lebron') {
+            win(playerMove, computerMove)
+        }else {
+             lose(playerMove, computerMove)}
     }
-    }
-
-
-const win =() => {
-    {$('<h2>').text(`You chose ${playerrMove} and the computer chose ${computerMove}. You win! You're awesome!`).appendTo($winner) }; 
-    (score.player ++).appendTo($playerScore)
-    
 }
-const lose =() => {
-    {$('<h2>').text(`Computer chose ${computerMove} and you chose ${playerMove}. Computer wins, womp womp better luck next time!`).appendTo($winner) }; 
-    (score.computer ++).appendTo($computerScore)
+
+
+
+const win =(playerMove, computerMove) => {
+    $winner.text(`You chose ${playerMove} and the computer chose ${computerMove}. You win! You're awesome!`).appendTo($winner);
+    score.player ++;
+    console.log(`player score is ${score.player} computer score is ${score.computer}` )
+    $playerScore.text(score.player)
+}
+const lose =(playerMove, computerMove) => {
+    $winner.text(`Computer chose ${computerMove} and you chose ${playerMove}. Computer wins, womp womp!`)
+    score.computer++;
+    console.log(`player score is ${score.player} computer score is ${score.computer} `)
+    $computerScore.text(score.computer)
 }
 
 //adjust score for best of 7 games
@@ -74,9 +88,6 @@ const lose =() => {
     //if computer wins, add 1 to computer, UNTIL one gets to 4
 
 
-
- 
-const moves = ["kobe", "jordan", "lebron", "curry", "shaq"];
 
 const $kobe = $('#kobe') 
 $kobe.on("click", function() {playGame(`${moves[0]}`)})
