@@ -9,7 +9,7 @@ body {
     font-family: arial;
   }
 
-  .scoreboard {
+.scoreboard {
     margin: 30px auto;
     background-color: #fd79bb;
     padding: 20px 33px 30px 15px;
@@ -20,12 +20,9 @@ body {
     border-radius: 10px;
   }
 
-
-
-  .stars {
+.allstars > img {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     cursor: pointer;
     border: none;
     max-width: 200px; 
