@@ -15,6 +15,8 @@ const getComputerMove = () => {
 // const $spock = $('#spock') 
 
 $winner = $('.winner')
+$playerScore = $('#playerScore')
+$computerScore = $('#computerScore')
 
 //Kobe beats Curry, Shaq
 // Jordan beats Curry, Kobe
@@ -31,39 +33,47 @@ const playGame = (playerMove) => {
     if (playerMove === computerMove) {
         $('<h2>').text('Its a tie').appendTo($winner);
     } else if (playerMove === 'kobe') {
-        if (computerMove === 'curry' || playerMove === 'shaq') 
-        
-        // {$('<h2>').text('computer wins').appendTo($winner) }; 
-        else {$('<h2>').text('player wins').appendTo($winner) };
-    } else if ( === 'jordan') {
-        if (playerMove === 'curry' || playerMove === 'kobe') {$('<h2>').text('computer wins').appendTo($winner) }
-        else {$('<h2>').text('player wins').appendTo($winner) };
+        if (computerMove === 'curry' || computerMove === 'shaq') 
+            {win();}
+        else {lose();}
+    } else if ( playerMove=== 'jordan') {
+        if (computerMove === 'curry' || computerMove === 'kobe') 
+            {win()}
+        else {lose()};
     } else if (playerMove ==='lebron') {
-        if (playerMove === 'jordan' || playerMove === 'kobe') {$('<h2>').text('computer wins').appendTo($winner) }
-        else {$('<h2>').text('player wins').appendTo($winner) };
+        if (computerMove === 'jordan' || computerMove === 'kobe') 
+            {win()}
+        else {lose()};
     } else if (playerMove === 'curry') {
-        if (playerMove === 'lebron' || playerMove === 'shaq') {$('<h2>').text('computer wins').appendTo($winner) }
-        else {$('<h2>').text('player wins').appendTo($winner) };
+        if (computerMove === 'lebron' || computerMove === 'shaq') 
+            {win()}
+        else {lose()};
     } else {
-        if (playerMove === 'jordan' || playerMove === 'lebron') {$('<h2>').text('computer wins').appendTo($winner) }
-        else {$('<h2>').text('player wins').appendTo($winner) };
+        if (computerMove === 'jordan' || computerMove === 'lebron') 
+            {win()}
+        else {lose()};
     }
     }
 
 
 const win =() => {
-    score
+    {$('<h2>').text(`You chose ${playerrMove} and the computer chose ${computerMove}. You win! You're awesome!`).appendTo($winner) }; 
+    (score.player ++).appendTo($playerScore)
+    
+}
+const lose =() => {
+    {$('<h2>').text(`Computer chose ${computerMove} and you chose ${playerMove}. Computer wins, womp womp better luck next time!`).appendTo($winner) }; 
+    (score.computer ++).appendTo($computerScore)
 }
 
 //adjust score for best of 7 games
 //run until one player gets
 
-const adjustScore = () => {
-    for (i=0; i===4; i++)
+
     //if player wins, add 1 to player
     //if computer wins, add 1 to computer, UNTIL one gets to 4
 
-}
+
 
  
 const moves = ["kobe", "jordan", "lebron", "curry", "shaq"];
