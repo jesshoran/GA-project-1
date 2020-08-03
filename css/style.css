@@ -10,9 +10,9 @@ body {
   }
 
 .scoreboard {
-    margin: 77px auto;
-    background-color: #fd79bb;
-    padding: 30px 37px 15px 15px;
+    margin: 30px auto;
+    background-color: black;
+    padding: 35px 37px 40px 15px;
     width: 175px;
     border: 1px solid black;
     text-align: center;
@@ -33,31 +33,31 @@ body {
 .allstars {
     cursor: pointer;
     border: none;
-    position: absolute;
-    bottom: 50px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 150px;
 }
 
-
-
 #kobe > img {
-      width: 100px;
+    width: 100px;
   }
 
 #jordan > img {
+
     width: 150px;
 }
 
 #lebron > img {
-    width: 200px;
+
+    width: 170px;
 }
 
 #curry > img {
+
     width: 100px;
 }
 
 #shaq > img {
+
     width: 200px;
 }

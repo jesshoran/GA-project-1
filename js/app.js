@@ -7,6 +7,7 @@ score = {
 
 playerMove = null;
 computerMove = null;
+playerChoice = null;
 
 const moves = ["Kobe", "Jordan", "Lebron", "Curry", "Shaq"];
 
@@ -16,12 +17,10 @@ const getComputerMove = () => {
 }
 computerMove = getComputerMove();
 
-// const $lizard = $('#lizard')
-// const $spock = $('#spock') 
-
 $winner = $('.winner')
 $playerScore = $('#playerScore')
 $computerScore = $('#computerScore')
+$gamewinner = $('.gamewinner')
 
 //Kobe beats Curry, Shaq
 // Jordan beats Curry, Kobe
@@ -29,10 +28,7 @@ $computerScore = $('#computerScore')
 // Curry beats Lebron, Shaq
 // Shaq beats Jordan, Lebron
 
-
-
 const playGame = (playerMove) => {
-    // const computerMove = getComputerMove();
     console.log(`computer move is + ${computerMove}`)
     console.log(`player move is + ${playerMove}`)
     if (playerMove === computerMove) {
@@ -70,25 +66,33 @@ const playGame = (playerMove) => {
 const win =(playerMove, computerMove) => {
     $winner.text(`You chose ${playerMove} and the computer chose ${computerMove}. You win! You're awesome!`).appendTo($winner);
     score.player ++;
-    console.log(`player score is ${score.player} computer score is ${score.computer}` )
+    // console.log(`player score is ${score.player} computer score is ${score.computer}` )
     $playerScore.text(score.player)
+    if (score.player === 4) {
+        playerChoice = prompt(`Congrats! You've led the Western Conference to victory and won the game!`, `yes|no`)
+            if (playerChoice === "yes") {
+                location.reload();
+            }else if (playerChoice === "no") {
+                location.reload();
+            
+        }
+    }
 }
 const lose =(playerMove, computerMove) => {
     $winner.text(`Computer chose ${computerMove} and you chose ${playerMove}. Computer wins, womp womp!`)
     score.computer++;
-    console.log(`player score is ${score.player} computer score is ${score.computer} `)
+    // console.log(`player score is ${score.player} computer score is ${score.computer} `)
     $computerScore.text(score.computer)
+    if (score.computer === 4) {
+        playerChoice = prompt(`Bummer!! You've lost to the  Eastern Conference. Do you want to try again?`, `yes||no`)
+            if (playerChoice=== "yes") {
+                location.reload();
+            }else if (playerChoice === "no") {
+                locationß.reload();
+        }
+    }
+
 }
-
-//adjust score for best of 7 games
-//run until one player gets
-
-
-    //if player wins, add 1 to player
-    //if computer wins, add 1 to computer, UNTIL one gets to 4
-
-
-
 const $kobe = $('#kobe') 
 $kobe.on("click", function() {playGame(`${moves[0]}`)})
 
@@ -106,12 +110,3 @@ $shaq.on("click", function() {playGame(`${moves[4]}`)})
 
 });
 
-
-
-
-
-
-//user has 5 choices
-//computer choice is selected at random
-//user pushes a button, which tells us the user move
-//function is written to determine the winner based on both choices
