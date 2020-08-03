@@ -26,26 +26,26 @@ const playGame = (playerMove) => {
     console.log(`player move is + ${playerMove}`)
     if (playerMove === computerMove) {
         $('<h2>').text('Its a tie').appendTo($winner);
-    } else if (computerMove === 'rock') {
-        if (playerMove === 'lizard' || playerMove === 'scissors') {$('<h2>').text('computer wins').appendTo($winner) }
+    } else if (computerMove === 'kobe') {
+        if (playerMove === 'curry' || playerMove === 'shaq') {$('<h2>').text('computer wins').appendTo($winner) }
         else {$('<h2>').text('player wins').appendTo($winner) };
-    } else if (computerMove === 'paper') {
-        if (playerMove === 'rock' || playerMove === 'spock') {$('<h2>').text('computer wins').appendTo($winner) }
+    } else if (computerMove === 'jordan') {
+        if (playerMove === 'curry' || playerMove === 'kobe') {$('<h2>').text('computer wins').appendTo($winner) }
         else {$('<h2>').text('player wins').appendTo($winner) };
-    } else if (computerMove ==='scisssors') {
-        if (playerMove === 'paper' || playerMove === 'lizard') {$('<h2>').text('computer wins').appendTo($winner) }
+    } else if (computerMove ==='lebron') {
+        if (playerMove === 'jordan' || playerMove === 'kobe') {$('<h2>').text('computer wins').appendTo($winner) }
         else {$('<h2>').text('player wins').appendTo($winner) };
-    } else if (computerMove === 'lizard') {
-        if (playerMove === 'paper' || playerMove === 'spock') {$('<h2>').text('computer wins').appendTo($winner) }
+    } else if (computerMove === 'curry') {
+        if (playerMove === 'lebron' || playerMove === 'shaq') {$('<h2>').text('computer wins').appendTo($winner) }
         else {$('<h2>').text('player wins').appendTo($winner) };
     } else {
-        if (playerMove === 'scissors' || playerMove === 'rock') {$('<h2>').text('computer wins').appendTo($winner) }
+        if (playerMove === 'jordan' || playerMove === 'lebron') {$('<h2>').text('computer wins').appendTo($winner) }
         else {$('<h2>').text('player wins').appendTo($winner) };
     }
     }
 
  
-const moves = ["Kobe", "Jordan", "Lebron", "Curry", "Shaq"];
+const moves = ["kobe", "jordan", "lebron", "curry", "shaq"];
 
 const $kobe = $('#kobe') 
 $kobe.on("click", function() {playGame(`${moves[0]}`)})
