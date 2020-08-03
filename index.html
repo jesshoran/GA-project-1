@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>All Star Match Up</title>
+    <title>All Star Matchup</title>
 </head>
 
 <body>
@@ -15,6 +15,18 @@
 
     <script src="js/app.js" charset="utf-8"></script>
 
+    <button id="openModal">About The Game!</button>
+    <div id="modal">
+      <div id="modal-textbox">
+        <h1>ALL STAR MATCHUP</h1>
+        <p>Here's a placeholder for the rules!</p>
+        <p>Explain who wins and why </p>
+        <div id="modal-footer">
+          <a id="close" href="#">Close</a>
+          </div>
+      </div>
+    </div>
+ 
     <h1>All-Star Match Up </h1>
 
     <div class="scoreboard">
@@ -27,14 +39,14 @@
     <h3>Are you ready to have some fun? Let's play!</h3>
     <p>Choose your player below...good luck!.</p>
 
-    <div class="winner"><h1>Good Luck</h1></div>
+    <div class="winner">Good Luck</div>
     <div class="gamewinner"></div>
 
     <div class="allstars">
 
-        <span class="images" id="kobe">
+        <div class="images" id="kobe">
             <img src="images/kobe.png" alt="kobe">
-        </span>
+        </div>
 
         <span class="images" id="jordan">
             <img src="images/jordan.png" alt="jordan">

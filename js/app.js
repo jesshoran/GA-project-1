@@ -1,5 +1,26 @@
 $(() => {
 
+const changeDisplayValue = (event, selector, displayValue) => {
+    const $item = $(selector);
+    $item.css('display', displayValue);
+    }
+
+   //Grabbing Elements
+   const $openBtn = $('#openModal');
+   const $modal = $('#modal');
+   const $closeBtn = $('#close');
+   //Event Listeners
+   $openBtn.on('click', (event)=>{
+       changeDisplayValue(event, $modal, 'block')
+   });
+   $closeBtn.on('click', (event)=>{
+       changeDisplayValue(event, $modal, 'none')
+   });
+   $randomH1.on('click', (event) => {
+       changeDisplayValue(event, $randomH1, 'none')
+   })
+   setTimeout(openModal, 5000);
+
 score = {
     player: 0,
     computer: 0
@@ -64,7 +85,7 @@ const playGame = (playerMove) => {
 
 
 const win =(playerMove, computerMove) => {
-    $winner.text(`You chose ${playerMove} and the computer chose ${computerMove}. You win! You're awesome!`).appendTo($winner);
+    $winner.text(`You chose ${playerMove} and the computer chose ${computerMove}. You win! You're awesome!`)
     score.player ++;
     // console.log(`player score is ${score.player} computer score is ${score.computer}` )
     $playerScore.text(score.player)
