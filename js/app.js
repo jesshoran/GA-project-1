@@ -96,7 +96,7 @@ const lose =(playerMove, computerMove) => {
             if (playerChoice=== "yes") {
                 location.reload();
             }else if (playerChoice === "no") {
-                locationß.reload();
+                location.reload();
         }
     }
 
