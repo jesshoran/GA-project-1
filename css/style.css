@@ -73,31 +73,57 @@ body {
 .scoreboard {
     margin: auto;
     background-color: black;
+    color: white;
+    border: 3px solid white;
     padding: 35px 37px 60px 15px;
     width: 175px;
-    border: 1px solid black;
+    height: 100px;
+    position:relative;
     text-align: center;
     font-size: 25px;
     border-radius: 10px;
   }
 
 #player {
-    position: relative;
-    margin: auto;
-
+    position: absolute;
+    top: 30;
+    left: 10px;
   }
 
 #computer {
-
+    position: absolute;
+    top: 30px;
+    right: 10px;
   }
+
+#playerScore {
+    font-size: 60px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+}
+
+#computerScore {
+    font-size: 60px;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+}
+
+#startgame {
+    margin: 20px auto;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+
+}
 
 .allstars {
     cursor: pointer;
     border: none;
     display: flex;
     justify-content: space-evenly;
-    position: fixed;
-    margin: 100px;
     padding: 150px;
 }
 

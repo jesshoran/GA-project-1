@@ -1,5 +1,7 @@
 $(() => {
 
+// prompt()
+
 const changeDisplayValue = (event, selector, displayValue) => {
     const $item = $(selector);
     $item.css('display', displayValue);
@@ -8,7 +10,8 @@ const changeDisplayValue = (event, selector, displayValue) => {
 const $openBtn = $('#openModal');
 const $modal = $('#modal');
 const $closeBtn = $('.modal-close');
-// const $charles = $('.charles');
+const $startgame = $('#startgame')
+const $charles = $('.charles');
 
 score = {
     player: 0,
@@ -17,6 +20,7 @@ score = {
 
 computerMove = null;
 playerChoice = null;
+playerName = null;
 
 const moves = ["Kobe", "Jordan", "Lebron", "Curry", "Shaq"];
 
@@ -36,6 +40,19 @@ $gamewinner = $('.gamewinner')
 // Lebron beats Jordan, Kobe
 // Curry beats Lebron, Shaq
 // Shaq beats Jordan, Lebron
+
+const startGame = () => {
+    playerName = prompt('To begin, please tell us your name', 'Suzy Q')
+    $('#player').text(`${playerName}`)
+    if (playerName = true) {
+        $startgame.hide()
+        $('#charles').fadeIn(1000).delay(1000).fadeOut(1000);
+        $('.charles').text(`GOOD LUCK! Select your first player!`).fadeIn(1).delay(2000).fadeOut(1000);
+    }
+
+
+}
+
 
 const playGame = (playerMove) => {
     console.log(`computer move is + ${computerMove}`)
@@ -78,12 +95,15 @@ const win =(playerMove, computerMove) => {
     // console.log(`player score is ${score.player} computer score is ${score.computer}` )
     $playerScore.text(score.player)
     if (score.player === 4) {
-        playerChoice = prompt(`Congrats! You've led the Western Conference to victory and won the game!`, `yes|no`)
+        playerChoice = prompt(`Congrats! You beat legendary Charles Barkley, you're awesome! Want to play again?`, `yes|no`)
             if (playerChoice === "yes") {
-                location.reload();
+                score.computer = 0;
+                score.player = 0;
+                $computerScore.text(0)
+                $playerScore.text(0);
+                $winner.text(`Select your first player!`)
             }else if (playerChoice === "no") {
                 location.reload();
-            
         }
     }
 }
@@ -95,7 +115,11 @@ const lose =(playerMove, computerMove) => {
     if (score.computer === 4) {
         playerChoice = prompt(`Bummer!! You've lost to Charles. He's pretty good at this so don't feel too bad. Do you want to try again?`, `yes||no`)
             if (playerChoice=== "yes") {
-                location.reload();
+                score.computer = 0;
+                score.player = 0;
+                $computerScore.text(0)
+                $playerScore.text(0);
+                $winner.text(`Select your first player!`)
             }else if (playerChoice === "no") {
                 location.reload();
         }
@@ -103,12 +127,14 @@ const lose =(playerMove, computerMove) => {
 
 }
 
+$startgame.on("click", function() {startGame()})
+
 $openBtn.on('click', (event)=>{
     changeDisplayValue(event, $modal, 'block')});
 
 $closeBtn.on('click', (event)=>{
     changeDisplayValue(event, $modal, 'none');
-    $('#charles').fadeIn(1).delay(500).fadeOut(500);
+    // $('#charles').fadeIn(1).delay(500).fadeOut(500);
 });
 
 const $kobe = $('#kobe') 
@@ -125,6 +151,8 @@ $curry.on("click", function() {playGame(`${moves[3]}`)})
 
 const $shaq = $('#shaq') 
 $shaq.on("click", function() {playGame(`${moves[4]}`)})
+
+
 
 });
 
