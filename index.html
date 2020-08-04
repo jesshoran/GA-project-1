@@ -9,18 +9,20 @@
 
 <body>
 
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <script src="js/app.js" charset="utf-8"></script>
 
-    <button id="openModal">Let Charles teach you about the Game!</button>
+    <button id="openModal">Learn about All-Star Matchup!</button>
     <div id="modal">
       <div id="modal-textbox">
+        <div id="modal-header">
+            <button class="modal-close" id="top-close" href="#">X</button>
+        </div>
         <h1>ALL-STAR MATCHUP</h1>
         <p>Welcome to the ULTIMATE All-Star Matchup! </p>
-        <p>5 of the NBA's greatest athletes are going back in time to their prime years in order to compete with other greats. They will be getting together at Staples Center for the ULTIMATE match-up! You have been chosen to select one player each round, and Charles Barkley will be selecting the other player. You will both select a player of your choice but will not know who the other has selected until they match up. Then a winner will be selected. Just like the finals, it's the best of 7 games! Choose wisey.... </p>>
+        <p>5 of the NBA's greatest athletes are going back in time to their prime years in order to compete with other greats. They will be getting together at Staples Center for the ULTIMATE match-up! You have been chosen to select one player each round, and Charles Barkley will be selecting the other player. You will both select a player of your choice but will not know who the other has selected until they match up. Then a winner will be selected. Just like the finals, it's the best of 7 games! Choose wisey.... </p>
         <p>Here is who beats who and why! </p>
         <p>Kobe Bryant: Kobe beats Curry beacause he's a better defender, and he beats Shaq because he knows all of his weaknesses from being teammates. </p>
         <p>Michael Jordan: Jordan beats Curry also because he's a better defender and let's be honest, overall player. He also beats Kobe because Kobe knows what he knows from Jordan, plus Jordan schooled him in their first game together in '96 and the first All-Star game together in '98.</p>
@@ -28,11 +30,10 @@
         <p>Steph Curry: Curry beats Lebron and Shaq with his ability to outscore them with 3's.</p>
         <p>Shaquille O'Neal: Shaq beats Jordan and Lebron based on his size and ability to block shots.</p>
 
-
-        Let's start with Kobe:  </p>
         <div id="modal-footer">
-          <a id="close" href="#">Close</a>
-          </div>
+            <button class="modal-close" id="bottom-close" href="#">Close</button>
+        </div>
+
       </div>
     </div>
  
@@ -45,10 +46,9 @@
         <span id="playerScore">0</span>:<span id="computerScore">0</span>
     </div>
 
-    <h3>Are you ready to have some fun? Let's play!</h3>
-    <p>Choose your player below...good luck!.</p>
+    <div class="charles"></div>
 
-    <!-- <img src="images/charles.gif" alt="barley"> -->
+    <img src="images/charles.gif" id="charles" alt="barkey">
 
     <div class="winner">Good Luck</div>
     <div class="gamewinner"></div>

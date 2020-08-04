@@ -7,7 +7,8 @@ const changeDisplayValue = (event, selector, displayValue) => {
 
 const $openBtn = $('#openModal');
 const $modal = $('#modal');
-const $closeBtn = $('#close');
+const $closeBtn = $('.modal-close');
+// const $charles = $('.charles');
 
 score = {
     player: 0,
@@ -92,7 +93,7 @@ const lose =(playerMove, computerMove) => {
     // console.log(`player score is ${score.player} computer score is ${score.computer} `)
     $computerScore.text(score.computer)
     if (score.computer === 4) {
-        playerChoice = prompt(`Bummer!! You've lost to the  Eastern Conference. Do you want to try again?`, `yes||no`)
+        playerChoice = prompt(`Bummer!! You've lost to Charles. He's pretty good at this so don't feel too bad. Do you want to try again?`, `yes||no`)
             if (playerChoice=== "yes") {
                 location.reload();
             }else if (playerChoice === "no") {
@@ -106,7 +107,9 @@ $openBtn.on('click', (event)=>{
     changeDisplayValue(event, $modal, 'block')});
 
 $closeBtn.on('click', (event)=>{
-    changeDisplayValue(event, $modal, 'none')});
+    changeDisplayValue(event, $modal, 'none');
+    $('#charles').fadeIn(1).delay(500).fadeOut(500);
+});
 
 const $kobe = $('#kobe') 
 $kobe.on("click", function() {playGame(`${moves[0]}`)})
