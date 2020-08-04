@@ -5,28 +5,15 @@ const changeDisplayValue = (event, selector, displayValue) => {
     $item.css('display', displayValue);
     }
 
-   //Grabbing Elements
-   const $openBtn = $('#openModal');
-   const $modal = $('#modal');
-   const $closeBtn = $('#close');
-   //Event Listeners
-   $openBtn.on('click', (event)=>{
-       changeDisplayValue(event, $modal, 'block')
-   });
-   $closeBtn.on('click', (event)=>{
-       changeDisplayValue(event, $modal, 'none')
-   });
-   $randomH1.on('click', (event) => {
-       changeDisplayValue(event, $randomH1, 'none')
-   })
-   setTimeout(openModal, 5000);
+const $openBtn = $('#openModal');
+const $modal = $('#modal');
+const $closeBtn = $('#close');
 
 score = {
     player: 0,
     computer: 0
 }
 
-playerMove = null;
 computerMove = null;
 playerChoice = null;
 
@@ -114,6 +101,13 @@ const lose =(playerMove, computerMove) => {
     }
 
 }
+
+$openBtn.on('click', (event)=>{
+    changeDisplayValue(event, $modal, 'block')});
+
+$closeBtn.on('click', (event)=>{
+    changeDisplayValue(event, $modal, 'none')});
+
 const $kobe = $('#kobe') 
 $kobe.on("click", function() {playGame(`${moves[0]}`)})
 
