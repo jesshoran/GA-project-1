@@ -9,6 +9,11 @@ body {
     font-family: arial;
   }
 
+#openModal {
+
+
+}
+
 #modal {
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
@@ -40,9 +45,9 @@ body {
 }
 
 .scoreboard {
-    margin: 30px auto;
+    margin: auto;
     background-color: black;
-    padding: 35px 37px 40px 15px;
+    padding: 35px 37px 60px 15px;
     width: 175px;
     border: 1px solid black;
     text-align: center;
