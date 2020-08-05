@@ -9,13 +9,6 @@ body {
     font-family: arial;
   }
 
-/* #openModal {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-
-} */
-
 #modal {
     background-color: rgba(0,0,0,0.4);
 	position: fixed;
@@ -76,8 +69,8 @@ body {
     color: white;
     border: 3px solid white;
     padding: 35px 37px 60px 15px;
-    width: 175px;
-    height: 100px;
+    width: 150px;
+    height: 75px;
     position:relative;
     text-align: center;
     font-size: 25px;
@@ -124,31 +117,31 @@ body {
     border: none;
     display: flex;
     justify-content: space-evenly;
-    padding: 150px;
+    padding: 200px;
 }
 
 #kobe > img {
-    width: 100px;
+    width: 50px;
   }
 
 #jordan > img {
 
-    width: 150px;
+    width: 75px;
 }
 
 #lebron > img {
 
-    width: 170px;
+    width: 85px;
 }
 
 #curry > img {
 
-    width: 100px;
+    width: 50px;
 }
 
 #shaq > img {
 
-    width: 200px;
+    width: 100px;
 }
 
 /* OG */
