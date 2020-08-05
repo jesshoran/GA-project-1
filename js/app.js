@@ -23,7 +23,7 @@ score = {
 
 computerMove = null;
 playerChoice = null;
-playerName = null;
+let playerName = Player;
 
 const moves = ["Kobe", "Jordan", "Lebron", "Curry", "Shaq"];
 
@@ -47,7 +47,7 @@ const startGame = () => {
         $('#charles').fadeIn(1000).delay(1000).fadeOut(1000);
         $('.charles').text(`GOOD LUCK! Select your first player!`).fadeIn(1).delay(2000).fadeOut(1000);
     } else if (playerName = false) {
-        $location.reload();
+        playerName = player
     }
 
 

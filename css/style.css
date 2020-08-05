@@ -9,12 +9,12 @@ body {
     font-family: arial;
   }
 
-#openModal {
+/* #openModal {
     position: fixed;
     top: 20px;
     left: 20px;
 
-}
+} */
 
 #modal {
     background-color: rgba(0,0,0,0.4);
@@ -151,3 +151,148 @@ body {
     width: 200px;
 }
 
+/* OG */
+@media (min-width: 600px) {
+    
+    #openModal {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+    
+    }
+    
+    #modal {
+        background-color: rgba(0,0,0,0.4);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        overflow: auto;
+        display: none;
+    }
+    
+    #modal-textbox {
+        background-color: white;
+        color: black;
+        height: 350px;
+        width: 550px;
+        border-radius: 2px;
+        margin: 150px auto;
+        text-align: left;
+        /*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        /*This will give the box some depth.*/
+        padding: 2%; 
+        line-height: 120%;
+        overflow: auto;
+    
+    }
+    #modal-textbox > h1 {
+        text-align: center;
+    }
+    
+    .modal-close {
+        padding: 14px 18px;
+        background-color:#fc53c1;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        color: white;
+        font-family: 'Arial';
+        cursor: pointer;
+    }
+    
+    #top-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    #charles {
+        display: none;
+        width: 50%;
+    }
+    
+    .scoreboard {
+        margin: auto;
+        background-color: black;
+        color: white;
+        border: 3px solid white;
+        padding: 35px 37px 60px 15px;
+        width: 175px;
+        height: 100px;
+        position:relative;
+        text-align: center;
+        font-size: 25px;
+        border-radius: 10px;
+      }
+    
+    #player {
+        position: absolute;
+        top: 30;
+        left: 10px;
+      }
+    
+    #computer {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+      }
+    
+    #playerScore {
+        font-size: 60px;
+        position: absolute;
+        top: 100px;
+        left: 40px;
+    }
+    
+    #computerScore {
+        font-size: 60px;
+        position: absolute;
+        top: 100px;
+        right: 40px;
+    }
+    
+    #startgame {
+        margin: 20px auto;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+        text-align: center;
+    
+    }
+    
+    .allstars {
+        cursor: pointer;
+        border: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 150px;
+    }
+    
+    #kobe > img {
+        width: 100px;
+      }
+    
+    #jordan > img {
+    
+        width: 150px;
+    }
+    
+    #lebron > img {
+    
+        width: 170px;
+    }
+    
+    #curry > img {
+    
+        width: 100px;
+    }
+    
+    #shaq > img {
+    
+        width: 200px;
+    }
+}
