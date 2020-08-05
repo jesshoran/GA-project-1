@@ -11,7 +11,10 @@ const $openBtn = $('#openModal');
 const $modal = $('#modal');
 const $closeBtn = $('.modal-close');
 const $startgame = $('#startgame')
-const $charles = $('.charles');
+$winner = $('.winner')
+$playerScore = $('#playerScore')
+$computerScore = $('#computerScore')
+$gamewinner = $('.gamewinner')
 
 score = {
     player: 0,
@@ -28,12 +31,7 @@ const getComputerMove = () => {
     const randomIndex = Math.floor(Math.random()*5)
     return moves[randomIndex]    
 }
-computerMove = getComputerMove();
 
-$winner = $('.winner')
-$playerScore = $('#playerScore')
-$computerScore = $('#computerScore')
-$gamewinner = $('.gamewinner')
 
 //Kobe beats Curry, Shaq
 // Jordan beats Curry, Kobe
@@ -42,12 +40,14 @@ $gamewinner = $('.gamewinner')
 // Shaq beats Jordan, Lebron
 
 const startGame = () => {
-    playerName = prompt('To begin, please tell us your name', 'Kareem Abdul-Jabbar')
+    playerName = prompt('To begin, please tell us your name', 'Kareem')
     $('#player').text(`${playerName}`)
     if (playerName = true) {
         $startgame.hide()
         $('#charles').fadeIn(1000).delay(1000).fadeOut(1000);
         $('.charles').text(`GOOD LUCK! Select your first player!`).fadeIn(1).delay(2000).fadeOut(1000);
+    } else if (playerName = false) {
+        $location.reload();
     }
 
 
@@ -55,6 +55,7 @@ const startGame = () => {
 
 
 const playGame = (playerMove) => {
+    computerMove = getComputerMove();
     console.log(`computer move is + ${computerMove}`)
     console.log(`player move is + ${playerMove}`)
     if (playerMove === computerMove) {
@@ -87,10 +88,10 @@ const playGame = (playerMove) => {
     }
 }
 
-
+$h1 = $('<h1>')
 
 const win =(playerMove, computerMove) => {
-    $winner.text(`You chose ${playerMove} and Charles chose ${computerMove}. You've won this round!`)
+    $winner.$h1.text.(`You chose ${playerMove} and Charles chose ${computerMove}. You've won this round!`)
     score.player ++;
     // console.log(`player score is ${score.player} computer score is ${score.computer}` )
     $playerScore.text(score.player)
@@ -108,7 +109,7 @@ const win =(playerMove, computerMove) => {
     }
 }
 const lose =(playerMove, computerMove) => {
-    $winner.text(`Charles chose ${computerMove} and you chose ${playerMove}. Charles wins this round, womp womp!`)
+    $winner.$h1.text.(`Charles chose ${computerMove} and you chose ${playerMove}. Charles wins this round, womp womp!`)
     score.computer++;
     // console.log(`player score is ${score.player} computer score is ${score.computer} `)
     $computerScore.text(score.computer)
@@ -134,12 +135,10 @@ $openBtn.on('click', (event)=>{
 
 $closeBtn.on('click', (event)=>{
     changeDisplayValue(event, $modal, 'none');
-    // $('#charles').fadeIn(1).delay(500).fadeOut(500);
 });
 
 const $kobe = $('#kobe') 
 $kobe.on("click", function() {playGame(`${moves[0]}`)})
-// $kobe.on("click", animate({bottom: '200px'}).delay(200).animate({top: '200px}'}))
 
 const $jordan = $('#jordan') 
 $jordan.on("click", function() {playGame(`${moves[1]}`)})
