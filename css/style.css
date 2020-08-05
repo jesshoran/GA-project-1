@@ -175,7 +175,7 @@ h1 {
 }
 
 /* OG */
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     
     #openModal {
         margin: 10px 0 10px 0;
@@ -295,30 +295,28 @@ h1 {
         border: none;
         display: flex;
         justify-content: space-evenly;
-        padding: 150px;
+        padding: 130px;
     }
     
     #kobe > img {
-        width: 100px;
+        width: 140px;
+        padding: 0 0 50px 0;
       }
     
     #jordan > img {
-    
-        width: 150px;
+        width: 220px;
+        padding: 0 0 50px 0;
     }
     
     #lebron > img {
-    
-        width: 170px;
+        width: 220px;
     }
     
-    #curry > img {
-    
-        width: 100px;
+    #curry > img {        
+        width: 130px;
     }
     
     #shaq > img {
-    
-        width: 200px;
+        width: 230px;
     }
 }

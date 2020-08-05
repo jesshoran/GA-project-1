@@ -44,7 +44,7 @@ const startGame = () => {
     $('#player').text(`${playerName}`)
     if (playerName = true) {
         $startgame.hide()
-        // $openBtn.hide();
+        $gamewinner.text('GOOD LUCK!')
         $('#charles').fadeIn(1000).delay(1000).fadeOut(1000);
         $('.charles').text(`GOOD LUCK! Select your first player!`).fadeIn(1).delay(2000).fadeOut(1000);
     } else if (playerName = false) {
@@ -89,12 +89,10 @@ const playGame = (playerMove) => {
     }
 }
 
-// $h1 = $('<h1>')
 
 const win =(playerMove, computerMove) => {
-    $winner.text(`You chose ${playerMove} and Charles chose ${computerMove}. You've won this round!`)
+    $winner.text(`You chose ${playerMove} and Charles chose ${computerMove}. You win this round!`)
     score.player ++;
-    // console.log(`player score is ${score.player} computer score is ${score.computer}` )
     $playerScore.text(score.player)
     if (score.player === 4) {
         playerChoice = prompt(`Congrats! You beat legendary Charles Barkley, you're awesome! Want to play again?`, `yes|no`)
@@ -112,7 +110,6 @@ const win =(playerMove, computerMove) => {
 const lose =(playerMove, computerMove) => {
     $winner.text(`Charles chose ${computerMove} and you chose ${playerMove}. Charles wins this round, womp womp!`)
     score.computer++;
-    // console.log(`player score is ${score.player} computer score is ${score.computer} `)
     $computerScore.text(score.computer)
     if (score.computer === 4) {
         playerChoice = prompt(`Bummer!! You've lost to Charles. He's pretty good at this so don't feel too bad. Do you want to try again?`, `yes||no`)
