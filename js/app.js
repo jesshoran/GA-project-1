@@ -49,17 +49,16 @@ const startGame = () => {
     } else if (playerName = false) {
         playerName = player
     }
-
-
 }
-
 
 const playGame = (playerMove) => {
     computerMove = getComputerMove();
     console.log(`computer move is + ${computerMove}`)
     console.log(`player move is + ${playerMove}`)
     if (playerMove === computerMove) {
-        $winner.text(`You both chose ${playerMove}. Its a tie!`)
+        const $h3 = $('<h3>')
+        $winner.empty()
+        $h3.text(`You both chose ${playerMove}. Its a tie!`).appendTo($winner)
     } else if (playerMove === 'Kobe') {
         if (computerMove === 'Curry' || computerMove === 'Shaq'){ 
             win(playerMove, computerMove)   
@@ -90,7 +89,9 @@ const playGame = (playerMove) => {
 
 
 const win =(playerMove, computerMove) => {
-    $winner.text(`You chose ${playerMove} and Charles chose ${computerMove}. You win this round!`)
+    const $h3 = $('<h3>')
+    $winner.empty()
+    $h3.text(`You chose ${playerMove} and Charles chose ${computerMove}. You win this round!`).appendTo($winner)
     score.player ++;
     $playerScore.text(score.player)
     if (score.player === 4) {
@@ -107,7 +108,9 @@ const win =(playerMove, computerMove) => {
     }
 }
 const lose =(playerMove, computerMove) => {
-    $winner.text(`Charles chose ${computerMove} and you chose ${playerMove}. Charles wins this round, womp womp!`)
+    const $h3 = $('<h3>')
+    $winner.empty()
+    $h3.text(`Charles chose ${computerMove} and you chose ${playerMove}. Charles wins this round, womp womp!`).appendTo($winner)
     score.computer++;
     $computerScore.text(score.computer)
     if (score.computer === 4) {

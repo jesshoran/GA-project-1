@@ -1,7 +1,7 @@
 body {
     text-align: center;
     margin: auto;
-    background: url("https://cdn.vox-cdn.com/thumbor/qjQsK5LFIeevQC8xNKo7ATUa6Eo=/0x0:7360x4912/1400x1400/filters:focal(2986x1821:4162x2997):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55264827/usa_today_10051572.0.jpg");
+    background-image: url("../images/staples.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
