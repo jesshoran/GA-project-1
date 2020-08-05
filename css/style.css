@@ -1,21 +1,43 @@
 body {
     text-align: center;
-    margin: 10px 0 0 0;
+    margin: auto;
     background: url("https://cdn.vox-cdn.com/thumbor/qjQsK5LFIeevQC8xNKo7ATUa6Eo=/0x0:7360x4912/1400x1400/filters:focal(2986x1821:4162x2997):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55264827/usa_today_10051572.0.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    height: 30%;
     color: white;
     font-family: arial;
   }
 h1 {
-    margin: 20px auto;
-    padding: auto auto auto 50px;;
+    /* margin: 20px auto;
+    padding: auto auto auto 50px;; */
+}
+/* 
+.flag-container {
+    position: relative;
+    width: 50%;
 }
 
-#openModal {
-    margin: 40px 0 68px 0;
+.flag-container img {
+    width: 100%;
+    height: auto;
+}
 
+.flag-conteiner #openModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+} */
+
+#openModal {
+    margin: 10px auto;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 #modal {
@@ -65,6 +87,15 @@ h1 {
     right: 20px;
 }
 
+#startgame {
+    margin: 20px auto;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+
+}
+
 #charles {
     display: none;
     width: 50%;
@@ -110,14 +141,6 @@ h1 {
     right: 40px;
 }
 
-#startgame {
-    margin: 20px auto;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px 20px;
-    text-align: center;
-
-}
 
 .allstars {
     cursor: pointer;
@@ -126,39 +149,40 @@ h1 {
     justify-content: space-evenly;
     padding: 200px;
 }
-
 #kobe > img {
-    width: 70px;
+    padding: 50px 0;
+    width: 80px;
   }
 
 #jordan > img {
-
-    width: 110px;
+    padding: 50px 0;
+    width: 100px;
 }
 
 #lebron > img {
-
+    padding: 50px 0;
     width: 110px;
 }
 
 #curry > img {
-
-    width: 70px;
+    padding: 50px 0;
+    width: 80px;
 }
 
 #shaq > img {
-
-    width: 130px;
+    padding: 50px 0;
+    width: 120px;
 }
 
 /* OG */
 @media (min-width: 600px) {
     
     #openModal {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-    
+        margin: 10px 0 10px 0;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+        text-align: center;
     }
     
     #modal {
@@ -214,7 +238,7 @@ h1 {
     }
     
     .scoreboard {
-        margin: auto;
+        /* margin: 0px -30px 0px 0px; */
         background-color: black;
         color: white;
         border: 3px solid white;
