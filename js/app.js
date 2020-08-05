@@ -40,7 +40,7 @@ const getComputerMove = () => {
 // Shaq beats Jordan, Lebron
 
 const startGame = () => {
-    playerName = prompt('To begin, please tell us your name', 'Kareem Abdul-Jabar')
+    playerName = prompt('To begin, please tell us your name', 'Jerry West')
     $('#player').text(`${playerName}`)
     if (playerName = true) {
         $startgame.hide()
