@@ -44,7 +44,7 @@ const startGame = () => {
     $('#player').text(`${playerName}`)
     if (playerName = true) {
         $startgame.hide()
-        $openBtn.hide();
+        // $openBtn.hide();
         $('#charles').fadeIn(1000).delay(1000).fadeOut(1000);
         $('.charles').text(`GOOD LUCK! Select your first player!`).fadeIn(1).delay(2000).fadeOut(1000);
     } else if (playerName = false) {
