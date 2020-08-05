@@ -40,11 +40,10 @@ const getComputerMove = () => {
 // Shaq beats Jordan, Lebron
 
 const startGame = () => {
-    playerName = prompt('To begin, please tell us your name', 'Jerry West')
+    playerName = prompt('To begin, please tell us your name', 'Phil Jackson')
     $('#player').text(`${playerName}`)
     if (playerName = true) {
         $startgame.hide()
-        $gamewinner.text('GOOD LUCK!')
         $('#charles').fadeIn(1000).delay(1000).fadeOut(1000);
         $('.charles').text(`GOOD LUCK! Select your first player!`).fadeIn(1).delay(2000).fadeOut(1000);
     } else if (playerName = false) {
@@ -60,7 +59,7 @@ const playGame = (playerMove) => {
     console.log(`computer move is + ${computerMove}`)
     console.log(`player move is + ${playerMove}`)
     if (playerMove === computerMove) {
-        $winner.text('Its a tie')
+        $winner.text(`You both chose ${playerMove}. Its a tie!`)
     } else if (playerMove === 'Kobe') {
         if (computerMove === 'Curry' || computerMove === 'Shaq'){ 
             win(playerMove, computerMove)   

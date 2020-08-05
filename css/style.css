@@ -9,28 +9,7 @@ body {
     color: white;
     font-family: arial;
   }
-h1 {
-    /* margin: 20px auto;
-    padding: auto auto auto 50px;; */
-}
-/* 
-.flag-container {
-    position: relative;
-    width: 50%;
-}
 
-.flag-container img {
-    width: 100%;
-    height: auto;
-}
-
-.flag-conteiner #openModal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-} */
 
 #openModal {
     margin: 10px auto;
@@ -174,8 +153,7 @@ h1 {
     width: 120px;
 }
 
-/* OG */
-@media (min-width: 700px) {
+@media (min-width: 650px) {
     
     #openModal {
         margin: 10px 0 10px 0;
@@ -236,9 +214,9 @@ h1 {
         display: none;
         width: 50%;
     }
-    
+
     .scoreboard {
-        /* margin: 0px -30px 0px 0px; */
+        margin: auto;
         background-color: black;
         color: white;
         border: 3px solid white;
@@ -251,6 +229,7 @@ h1 {
         border-radius: 10px;
       }
     
+
     #player {
         position: absolute;
         top: 30;
@@ -320,3 +299,50 @@ h1 {
         width: 230px;
     }
 }
+/* 
+@media (min-width: 900px) {
+    #modal-textbox {
+        background-color: white;
+        color: black;
+        height: 350px;
+        width: 550px;
+        border-radius: 2px;
+        margin: 150px auto;
+        text-align: left;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        padding: 2%; 
+        line-height: 120%;
+        overflow: auto;
+    
+    }
+
+    .allstars {
+        cursor: pointer;
+        border: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 130px;
+    }
+    
+    #kobe > img {
+        width: 140px;
+        padding: 0 0 50px 0;
+      }
+    
+    #jordan > img {
+        width: 220px;
+        padding: 0 0 50px 0;
+    }
+    
+    #lebron > img {
+        width: 220px;
+    }
+    
+    #curry > img {        
+        width: 130px;
+    }
+    
+    #shaq > img {
+        width: 230px;
+    }
+} */
