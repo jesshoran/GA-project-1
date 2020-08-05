@@ -23,7 +23,7 @@ score = {
 
 computerMove = null;
 playerChoice = null;
-let playerName = Player;
+playerName = null;
 
 const moves = ["Kobe", "Jordan", "Lebron", "Curry", "Shaq"];
 
@@ -44,6 +44,7 @@ const startGame = () => {
     $('#player').text(`${playerName}`)
     if (playerName = true) {
         $startgame.hide()
+        $openBtn.hide();
         $('#charles').fadeIn(1000).delay(1000).fadeOut(1000);
         $('.charles').text(`GOOD LUCK! Select your first player!`).fadeIn(1).delay(2000).fadeOut(1000);
     } else if (playerName = false) {
@@ -88,10 +89,10 @@ const playGame = (playerMove) => {
     }
 }
 
-$h1 = $('<h1>')
+// $h1 = $('<h1>')
 
 const win =(playerMove, computerMove) => {
-    $winner.$h1.text.(`You chose ${playerMove} and Charles chose ${computerMove}. You've won this round!`)
+    $winner.text(`You chose ${playerMove} and Charles chose ${computerMove}. You've won this round!`)
     score.player ++;
     // console.log(`player score is ${score.player} computer score is ${score.computer}` )
     $playerScore.text(score.player)
@@ -109,7 +110,7 @@ const win =(playerMove, computerMove) => {
     }
 }
 const lose =(playerMove, computerMove) => {
-    $winner.$h1.text.(`Charles chose ${computerMove} and you chose ${playerMove}. Charles wins this round, womp womp!`)
+    $winner.text(`Charles chose ${computerMove} and you chose ${playerMove}. Charles wins this round, womp womp!`)
     score.computer++;
     // console.log(`player score is ${score.player} computer score is ${score.computer} `)
     $computerScore.text(score.computer)

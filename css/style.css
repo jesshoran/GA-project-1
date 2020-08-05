@@ -8,6 +8,15 @@ body {
     color: white;
     font-family: arial;
   }
+h1 {
+    margin: 20px auto;
+    padding: auto auto auto 50px;;
+}
+
+#openModal {
+    margin: 40px 0 68px 0;
+
+}
 
 #modal {
     background-color: rgba(0,0,0,0.4);
@@ -24,14 +33,12 @@ body {
 #modal-textbox {
     background-color: white;
     color: black;
-	height: 350px;
-	width: 550px;
+	height: 450px;
+	width: 350px;
 	border-radius: 2px;
     margin: 150px auto;
     text-align: left;
-	/*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-	/*This will give the box some depth.*/
 	padding: 2%; 
 	line-height: 120%;
 	overflow: auto;
@@ -121,27 +128,27 @@ body {
 }
 
 #kobe > img {
-    width: 50px;
+    width: 70px;
   }
 
 #jordan > img {
 
-    width: 75px;
+    width: 110px;
 }
 
 #lebron > img {
 
-    width: 85px;
+    width: 110px;
 }
 
 #curry > img {
 
-    width: 50px;
+    width: 70px;
 }
 
 #shaq > img {
 
-    width: 100px;
+    width: 130px;
 }
 
 /* OG */
@@ -174,9 +181,7 @@ body {
         border-radius: 2px;
         margin: 150px auto;
         text-align: left;
-        /*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-        /*This will give the box some depth.*/
         padding: 2%; 
         line-height: 120%;
         overflow: auto;
