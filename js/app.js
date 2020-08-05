@@ -42,7 +42,7 @@ $gamewinner = $('.gamewinner')
 // Shaq beats Jordan, Lebron
 
 const startGame = () => {
-    playerName = prompt('To begin, please tell us your name', 'Suzy Q')
+    playerName = prompt('To begin, please tell us your name', 'Kareem Abdul-Jabbar')
     $('#player').text(`${playerName}`)
     if (playerName = true) {
         $startgame.hide()
@@ -90,7 +90,7 @@ const playGame = (playerMove) => {
 
 
 const win =(playerMove, computerMove) => {
-    $winner.text(`You chose ${playerMove} and the computer chose ${computerMove}. You win! You're awesome!`)
+    $winner.text(`You chose ${playerMove} and Charles chose ${computerMove}. You've won this round!`)
     score.player ++;
     // console.log(`player score is ${score.player} computer score is ${score.computer}` )
     $playerScore.text(score.player)
@@ -108,7 +108,7 @@ const win =(playerMove, computerMove) => {
     }
 }
 const lose =(playerMove, computerMove) => {
-    $winner.text(`Computer chose ${computerMove} and you chose ${playerMove}. Computer wins, womp womp!`)
+    $winner.text(`Charles chose ${computerMove} and you chose ${playerMove}. Charles wins this round, womp womp!`)
     score.computer++;
     // console.log(`player score is ${score.player} computer score is ${score.computer} `)
     $computerScore.text(score.computer)
@@ -139,6 +139,7 @@ $closeBtn.on('click', (event)=>{
 
 const $kobe = $('#kobe') 
 $kobe.on("click", function() {playGame(`${moves[0]}`)})
+// $kobe.on("click", animate({bottom: '200px'}).delay(200).animate({top: '200px}'}))
 
 const $jordan = $('#jordan') 
 $jordan.on("click", function() {playGame(`${moves[1]}`)})
